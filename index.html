@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kultusan — Sal Priadi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <!-- Menghubungkan file CSS eksternal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════ SLIDE 1 — TITLE ═══════════════ -->
+<section class="slide">
+  <div class="slide-num">01 / 05</div>
+  <div class="title-wrap">
+    <h1 class="main-title">Kultusan</h1>
+    <p class="subtitle">Sal Priadi <span>·</span> sebuah ruang untuk luka</p>
+  </div>
+  <div class="scroll-cue">scroll ↓</div>
+</section>
+
+<!-- ═══════════════ SLIDE 2 ═══════════════ -->
+<section class="slide">
+  <div class="slide-num">02 / 05</div>
+  <div class="deco-line"></div>
+  <p class="prose">
+    <span class="drop-cap">J</span>ejak bibir yang pernah berkelana jauh telah lama ditemukan dari puing-puing yang tidak pernah benar-benar bungkam. Ia, yang berdiri seolah paling bersih dari gelapnya kehidupan, perlahan melangkah masuk ke dalam lubang yang sama yang pernah disangkal keberadaannya. Satu per satu janji yang pernah terucap dibiarkan menguap bersama waktu, hingga kata-kata yang dahulu terdengar sakral tak lebih dari <em>gema yang kehilangan pemiliknya.</em>
+  </p>
+</section>
+
+<!-- ═══════════════ SLIDE 3 ═══════════════ -->
+<section class="slide">
+  <div class="slide-num">03 / 05</div>
+  <div class="deco-line"></div>
+  <p class="prose">
+    Kata pendusta yang tersirat dalam lirik <em>Kultusan</em> terasa seperti kata terburuk yang pernah ada. Bayangan sang pendusta, dan dusta yang pernah terucap sangat membekas bahkan ketika tubuh sudah lelah merasakannya. Luka itu tidak datang dengan suara yang keras, melainkan tinggal <em>diam dan membekas,</em> menolak pergi meski waktu terus berjalan. Yang paling sulit bukanlah menerima kenyataan bahwa semua telah usai, melainkan menyaksikan seseorang hidup tanpa penyesalan atas kehancuran yang ia tinggalkan.
+  </p>
+</section>
+
+<!-- ═══════════════ SLIDE 4 ═══════════════ -->
+<section class="slide">
+  <div class="slide-num">04 / 05</div>
+  <div class="deco-line"></div>
+  <p class="prose">
+    Ada ironi yang tak pernah berhasil kupahami. Seseorang dapat melanjutkan langkahnya tanpa penyesalan, tanpa karma. Berbanding terbalik dengan yang mati-matian menahan dorongan untuk mengakhiri segalanya, melawan bisikan yang datang tanpa diundang, hanya karena ia merasa gagal. <em>Gagal menjadi cukup, gagal membuatnya memahami arti cinta, gagal menjaga dan melindungi dari buasnya nafsu dunia.</em>
+    <br><br>
+    Pada akhirnya, <em>Kultusan</em> bukan sekadar lagu tentang pengagungan. Ia adalah ruang untuk semua luka-luka lama yang diberikan suaranya. Tempat segala amarah, kecewa, kesedihan, dan kehilangan yang selama ini terkubur.
+  </p>
+</section>
+
+<!-- ═══════════════ SLIDE 5 — QUOTE ═══════════════ -->
+<section class="slide">
+  <div class="slide-num">05 / 05</div>
+  <div class="quote-wrap">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">
+      <em>‘’Terkadang, yang paling menyakitkan bukan kehilangan, melainkan menyadari bahwa selama ini dirinya terlalu sibuk memuja hingga lupa bahwa dirinyalah yang paling membutuhkan pujaan itu.’’</em>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ PLAYER BAR ═══════════════ -->
+<div id="player">
+  <div class="track-info">
+    <strong>Kultusan</strong>
+    Sal Priadi
+  </div>
+
+  <button id="playBtn" aria-label="Play / Pause">
+    <!-- pause icon (default shown while playing) -->
+    <svg id="iconPause" viewBox="0 0 24 24"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+    <!-- play icon (hidden) -->
+    <svg id="iconPlay" viewBox="0 0 24 24" style="display:none"><polygon points="5,3 19,12 5,21"/></svg>
+  </button>
+
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
+    <div class="time-row">
+      <span id="tCur">0:00</span>
+      <span id="tTot">—</span>
+    </div>
+  </div>
+
+  <div class="vol-wrap">
+    <span class="vol-icon">
+      <svg viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+    </span>
+    <input type="range" id="volSlider" min="0" max="1" step="0.01" value="0.8"/>
+  </div>
+</div>
+
+<!-- autoplay notice -->
+<div id="notice">▶ klik play untuk memulai musik</div>
+
+<!-- ═══════════════ AUDIO ═══════════════ -->
+<audio id="audio" preload="auto">
+  <source src="kultusan.m4a" type="audio/mpeg">
+</audio>
+
+<!-- Menghubungkan file JS eksternal -->
+<script src="script.js"></script>
+</body>
+</html>
