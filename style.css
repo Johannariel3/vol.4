@@ -272,10 +272,12 @@ input[type=range]::-webkit-slider-thumb {
   animation: float 2.5s ease-in-out infinite;
 }
 
-/* watermark */
 .watermark {
   position: absolute;
-  bottom: 80px; right: 44px;
+  bottom: 80px;
+  right: 44px;
+  left: auto;
+  transform: none;
   font-family: 'DM Mono', monospace;
   font-size: 9px;
   letter-spacing: 0.2em;
