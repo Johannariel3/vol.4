@@ -16,7 +16,7 @@
 Website interaktif yang menampilkan analisis lirik dan makna di balik lagu **"Kultusan"** dari **Sal Priadi**. Website ini menggunakan konsep scroll-based slides dengan animasi halus dan player musik terintegrasi.
 
 ### Tema & Makna
-Kultusan bukan sekadar lagu tentang pengagungan. Ia adalah **ruang untuk semua luka lama** yang diberikan suaranya — tempat segala amarah, kecewa, kesedihan, dan kehilangan yang selama ini terkubur.
+Kultusan bukan sekadar lagu tentang pengagungan. Ia adalah **ruang untuk semua luka lama** yang diberikan suaranya, tempat segala amarah, kecewa, kesedihan, dan kehilangan yang selama ini terkubur.
 
 > *"Terkadang, yang paling menyakitkan bukan kehilangan, melainkan menyadari bahwa selama ini dirinya terlalu sibuk memuja hingga lupa bahwa dirinyalah yang paling membutuhkan pujaan itu."*
 
