@@ -275,8 +275,8 @@ input[type=range]::-webkit-slider-thumb {
 .watermark {
   position: absolute;
   bottom: 80px;
-  right: 44px;
-  left: auto;
+  left: 44px;
+  right: auto;
   transform: none;
   font-family: 'DM Mono', monospace;
   font-size: 9px;
