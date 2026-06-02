@@ -67,12 +67,10 @@
     Sal Priadi
   </div>
 
-  <button id="playBtn" aria-label="Play / Pause">
-    <!-- pause icon (default shown while playing) -->
+  <div id="playBtn">
     <svg id="iconPause" viewBox="0 0 24 24"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
-    <!-- play icon (hidden) -->
     <svg id="iconPlay" viewBox="0 0 24 24" style="display:none"><polygon points="5,3 19,12 5,21"/></svg>
-  </button>
+  </div>
 
   <div class="progress-wrap">
     <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
@@ -90,9 +88,6 @@
   </div>
 </div>
 
-<!-- autoplay notice -->
-<div id="notice"></div>
-
 <!-- ═══════════════ AUDIO ═══════════════ -->
 <audio id="audio" preload="auto">
   <source src="kultusan.mp3" type="audio/mpeg">
@@ -101,4 +96,5 @@
 <!-- Menghubungkan file JS eksternal -->
 <script src="script.js"></script>
 </body>
+
 </html>
