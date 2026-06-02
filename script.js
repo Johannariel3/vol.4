@@ -24,19 +24,26 @@ function fmt(s) {
 }
 
 function setPlaying(playing) {
-  iconPlay.style.display  = playing ? 'none'  : '';
-  iconPause.style.display = playing ? ''      : 'none';
+  iconPlay.style.display  = playing ? 'none' : '';
+  iconPause.style.display = playing ? ''     : 'none';
 }
 
-// try autoplay
-audio.play().then(() => {
-  setPlaying(true);
-  notice.classList.add('hidden');
-}).catch(() => {
-  setPlaying(false);
-  // notice stays visible prompting click
-});
+// ── autoplay setelah interaksi pertama ──
+function startOnFirstInteraction() {
+  audio.play().then(() => {
+    setPlaying(true);
+    notice.classList.add('hidden');
+  }).catch(() => {});
+  document.removeEventListener('click', startOnFirstInteraction);
+  document.removeEventListener('keydown', startOnFirstInteraction);
+  document.removeEventListener('scroll', startOnFirstInteraction);
+}
 
+document.addEventListener('click', startOnFirstInteraction);
+document.addEventListener('keydown', startOnFirstInteraction);
+document.addEventListener('scroll', startOnFirstInteraction, { passive: true });
+
+// ── tombol play/pause ──
 playBtn.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
@@ -48,10 +55,10 @@ playBtn.addEventListener('click', () => {
   }
 });
 
+// ── progress bar & waktu ──
 audio.addEventListener('timeupdate', () => {
   if (!audio.duration) return;
-  const pct = (audio.currentTime / audio.duration) * 100;
-  progFill.style.width = pct + '%';
+  progFill.style.width = (audio.currentTime / audio.duration * 100) + '%';
   tCur.textContent = fmt(audio.currentTime);
 });
 
@@ -61,6 +68,7 @@ audio.addEventListener('loadedmetadata', () => {
 
 audio.addEventListener('ended', () => setPlaying(false));
 
+// ── volume ──
 volSlider.addEventListener('input', () => {
   audio.volume = volSlider.value;
 });
