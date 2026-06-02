@@ -211,13 +211,11 @@ body::before {
   border-radius: 50%;
   border: 1px solid var(--ash2);
   background: transparent;
-  cursor: pointer;
+  cursor: default;
   display: flex; align-items: center; justify-content: center;
   color: var(--light);
-  transition: border-color 0.2s, background 0.2s;
   flex-shrink: 0;
 }
-#playBtn:hover { border-color: var(--ash4); background: rgba(255,255,255,0.04); }
 #playBtn svg { width: 14px; height: 14px; fill: currentColor; }
 
 /* volume */
